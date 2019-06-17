@@ -1,0 +1,194 @@
+html, body {
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: 2fr 16fr 5fr;
+	grid-template-areas: 
+		"h h h h h h h h"
+		"m m m m m s s s"
+		"f f f f f f f f";
+}
+
+form {
+	margin-top: 3%;
+	width: 500px;
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	background-color: #eef2f8;
+	grid-area: h;
+}
+
+.main {
+	background-color: #f9fafc;
+	grid-area: m;
+}
+
+.sidebar {
+	background-color: #f9fafc;
+	grid-area: s;
+}
+
+footer {
+	background-color: #eef2f8;
+	grid-area: f;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: 3fr 10fr;
+	grid-template-areas: 
+		". fd fd fd fd fd fd fd"
+		"sd sd sd sd sd sd sd sd";
+}
+
+.sec1 {
+	height: 50%;
+}
+
+.sec2 {
+	height: 50%;
+}
+
+.sec2-inside {
+	background-color: white;
+	font-size: 12px;
+}
+
+.tabs {
+	margin-left: 12.5%;
+}
+
+.tab { 
+	color: #99a7b9;
+}
+
+.tab.active {
+	color: #182b3f;
+}
+
+#check1 {
+	padding-left: 5px;
+	display: none;
+}
+
+header div {
+	display: flex;
+	align-items: center;
+}
+
+header div span {
+	margin-left: 12.5%;
+	color: #1b2d3e;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.separator {
+	padding: 0px 15px;
+	font-size: 10px;
+	color: #b0bccd;
+}
+
+h2 {
+	color: #1b2d3e;
+}
+
+.bar-option {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+p a {
+	color: #00d358;
+}
+
+.abbr {
+	color: #182b3f;
+	font-weight: bold;
+	font-size: 30px;
+	font-stretch: ultra-condensed;
+}
+
+.small-text {
+	font-size: 12px;
+	color: #aebbcc;
+}
+
+footer div:nth-child(1) {
+	grid-area: fd;
+	align-content: center;
+}
+
+footer div:nth-child(2) {
+	grid-area: sd;
+	display: flex;
+}
+
+footer div div {
+	width: 12.5%;
+	text-align: center;
+
+}
+
+/**/
+#next {
+	background-color: #f9fafc;
+	color: #c1d0e0;
+	border-radius: 22px;
+	border-color: #e1e9f1;
+	margin-top: 50px;
+}
+
+.select {
+	width: 500px;
+}
+
+.dropdown li a:hover {
+	background-color: #eef2f8;
+}
+
+.btn {
+	border-radius: 4px;
+	text-align: left;
+}
+
+.select .caret {
+	position: absolute; 
+	right: 10px; 
+	margin-top: 7px;
+}
+
+.caret-right {
+	transform: rotate(270deg);
+}
+
+.option {
+	width: 100%;
+}
+
+.dropdown-submenu {
+	position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+	top: 0;
+	left: 100%;
+	margin-top: -2px;
+}
+
+.dsm:hover > .dropdown-menu {
+	display: block;
+}

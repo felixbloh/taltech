@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<title>Main page</title>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css"/>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<div class="sec sec1"> <span>< Назад</span></div>
+			<div class="sec sec2 sec2-inside">
+				<div class="tabs">
+					<div class="tab active">Категория</div>
+					<div>
+						<img id="check1" src="https://img.icons8.com/color/18/000000/checked.png">
+						<div class="separator">></div>
+					</div>
+					<div class="tab">Название</div>
+					<div class="separator">></div>
+					<div class="tab">Описание</div>
+					<div class="separator">></div>
+					<div class="tab">Файлы</div>
+					<div class="separator">></div>
+					<div class="tab">Обязательный вопрос</div>
+					<div class="separator">></div>
+					<div class="tab">Бюджет</div>
+					<div class="separator">></div>
+					<div class="tab">Публикация</div>
+				</div>
+			</div>
+		</header>
+		<section class="main">
+			<div>
+				<h2>Категория</h2>
+				<div>Выберите категорию вашего проекта</div>
+				<form id="form_cat" name="form1" ng-controller="defaultCtrl">	   
+					<div class="dropdown select">
+						<button type="button"  ng-model="code" class="option btn btn-default dropdown-toggle dropdown-header input-sm form-control" data-toggle="dropdown">Категория<span class="caret"></span></button>
+						<ul class="dropdown-menu option">
+							<li><a tabindex="-1" href="#">Разработка сайтов</a></li>
+							<li class="dropdown-submenu dsm">
+								<a class="sub" tabindex="-1" href="#">Тексты<span class="caret caret-right"></span></a>
+								<ul class="dropdown-menu">
+									<li><a tabindex="-1" href="#">Копирайтинг</a></li>
+									<li><a tabindex="-1" href="#">Редактирование/Корректура</a></li>
+									<li><a tabindex="-1" href="#">Статьи</a></li>
+									<li><a tabindex="-1" href="#">Рерайтинг</a></li>
+									<li><a tabindex="-1" href="#">Контент-менеджер</a></li>
+									<li><a tabindex="-1" href="#">Расшифровка аудио/видео</a></li>
+									<li><a tabindex="-1" href="#">Сканирование и распознавание</a></li>
+									<li><a tabindex="-1" href="#">Рефераты/Курсовые/Дипломы</a></li>
+									<li><a tabindex="-1" href="#">Стихи/Поэмы/Эссе</a></li>
+									<li><a tabindex="-1" href="#">Постинг</a></li>
+								</ul>
+							</li>
+							<li><a tabindex="-1" href="#">Арт и Дизайн</a></li>
+							<li><a tabindex="-1" href="#">Программирование</a></li>
+							<li><a tabindex="-1" href="#">Аутсорсинг и консалтинг</a></li>
+							<li><a tabindex="-1" href="#">Переводы</a></li>
+							<li><a tabindex="-1" href="#">Аудио/Видео</a></li>
+							<li><a tabindex="-1" href="#">Разработка игр</a></li>
+							<li><a tabindex="-1" href="#">Реклама и Маркетинг</a></li>
+							<li><a tabindex="-1" href="#">Фотография</a></li>
+						</ul>
+					</div>
+					<div class="text-right">
+						<button id="next" type="submit"formenctype="application/x-www-form-urlencoded" ng-click="submitForm(code)" disabled>Далее: Название<span class="caret"></span></button>
+					</div>
+				</form>
+			</div>
+		</section>
+		<section class="sidebar">
+			<div>
+				<div class="sec1 bar-option">
+					<img src="https://img.icons8.com/ios/50/000000/manager.png">
+					<h5>Вакансия</h5>
+					<p>Для найма исполнителя на<br/>постоянную работу</p>
+					<p><a href="#">Разместить вакансию ></a></p>
+				</div>
+				<div class="sec2 bar-option">
+					<img src="https://img.icons8.com/ios/50/000000/trophy.png">
+					<h5>Конкурс</h5>
+					<p>Для выбора лучшего<br/>результата из нескольких</p>
+					<p><a href="#">Устроить конкурс ></a></p>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div>
+				<span class="abbr">FL</span></div>
+			<div>
+				<div></div>
+				<div>
+					<h6>Профиль</h6>
+				</div>
+				<div>
+					<h6>Выбрать исполнителя</h6>
+				</div>
+				<div>
+					<h6>Сервисы</h6>
+				</div>
+				<div>
+					<h6>О сайте</h6>
+				</div>
+				<div>
+					<h6>Следуй за нами в</h6>
+				</div>
+				<div>
+					<h6>Скачай в</h6>
+				</div>
+				<div></div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
